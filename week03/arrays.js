@@ -30,3 +30,12 @@ console.log(y2);
 const x3 = [12, 34, 21, 54];
 const luckNumber = 21;
 console.log(x3.indexOf(luckNumber));
+
+document.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  // how do we know which key was pressed?
+  console.log(e);
+  // checkout e.code, e.key, and e.keyCode
+  // what is the difference?
+}
