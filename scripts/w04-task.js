@@ -4,7 +4,7 @@
 
 let myProfile = {
     name: "Sakhile Mamba",
-    photo: "/images/me.png",
+    photo: "images/me.png",
     favoriteFoods: ["Pizza", "Cheese Burger", "Emasi", "Ox Tail", "Steak"],
     hobbies: ["Computer Programming", "Movies", "Computer Games", "Reading"],
     placesLived: [],
