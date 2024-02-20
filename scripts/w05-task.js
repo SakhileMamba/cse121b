@@ -8,7 +8,7 @@ let templeList = [];
 
 /* async displayTemples Function */
 
-const displayTemples = (listOfTemples) => {
+const renderMovies = (listOfTemples) => {
     listOfTemples.forEach((temple) => {
         let article = document.createElement("article");
 
@@ -31,7 +31,7 @@ const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
     templeList = await response.json();
     console.log(templeList);
-    displayTemples(templeList);
+    renderMovies(templeList);
 }
 
 /* reset Function */
@@ -49,7 +49,7 @@ const filterTemples = (temples) => {
 
     switch (filter) {
         case "utah":
-            displayTemples(
+            renderMovies(
                 temples.filter((temple) => {
                     return temple.location.includes("Utah");
 
@@ -57,14 +57,14 @@ const filterTemples = (temples) => {
             );
             break;
         case "notutah":
-            displayTemples(
+            renderMovies(
                 temples.filter((temple) => {
                     return !temple.location.includes("Utah")
                 })
             );
             break;
         case "older":
-            displayTemples(
+            renderMovies(
                 temples.filter((temple) => {
                     let dedicationDate = new Date(temple.dedicated);
                     let testDate = new Date(1950, 0, 1);
@@ -73,7 +73,7 @@ const filterTemples = (temples) => {
             );
             break;
         case "all":
-            displayTemples(temples);
+            renderMovies(temples);
             break;
     }
 }
