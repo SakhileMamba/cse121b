@@ -5,7 +5,7 @@ async function fetchMovies() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '1fd22aa7damsh9d9ad651cac54b2p127909jsn689266f1610c'',
+            'X-RapidAPI-Key': '1fd22aa7damsh9d9ad651cac54b2p127909jsn689266f1610c',
             'X-RapidAPI-Host': 'imdb-top-100-movies.p.rapidapi.com'
         }
     };
